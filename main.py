@@ -23,6 +23,11 @@ def corporates():
     name_change = "https://www1.nseindia.com/content/equities/namechange.csv"
     symbol_change = "https://www1.nseindia.com/content/equities/symbolchange.csv"
 
+    #bse_new_listing = "https://www.bseindia.com/markets/PublicIssues/AcqIssueDetail.aspx"
+    #nse_new_listing = "https://www.nseindia.com/market-data/new-stock-exchange-listings-forthcoming"
+    nse_listing = pd.read_html("https://www.nseindia.com/market-data/new-stock-exchange-listings-forthcoming")
+    #dfs = pd.read_html('http://en.wikipedia.org/wiki/World_population')
+    print(nse_listing[-1])
     # corp_base_path data
     corp_base_path = "https://www1.nseindia.com/corporates/datafiles/"
 
